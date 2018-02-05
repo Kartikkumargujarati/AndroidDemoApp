@@ -1,7 +1,8 @@
-package com.kartik.androiddemoapp
+package com.kartik.androiddemoapp.app.features
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kartik.androiddemoapp.R
 
 class MainActivity : AppCompatActivity() {
 
