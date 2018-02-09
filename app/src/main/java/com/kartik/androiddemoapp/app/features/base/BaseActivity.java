@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.kartik.androiddemoapp.app.features.MainActivity;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,16 +29,11 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(...);
 
-        if (shouldShowOnboardingFragment()) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish();
-            return;
+        // Set up the toolbar.
 
-        } else {
-            //showLoginActivity
-        }
+        // Set up the navigation drawer.
 
     }
 
@@ -54,13 +47,6 @@ public class BaseActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-
-
-    private boolean shouldShowOnboardingFragment() {
-        //if this is first time opening the app, return true, else false
-        return true;
-    }
-
 
     public void startActivity(final Intent intent) {
         super.startActivity(intent);
